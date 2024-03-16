@@ -1,29 +1,23 @@
 /* Estilos generales */
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-    font-family: Arial, sans-serif;
 }
 
-/* Estilos del encabezado */
 header {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 110vh;
     background-image: url(/fondo2.jpg);
     background-size: cover;
     background-position: center;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 header div {
@@ -47,7 +41,7 @@ div nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0px;
 }
 
 header div ul {
@@ -56,120 +50,166 @@ header div ul {
     justify-content: center;
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin-right: -100px;
+    margin: 10px 10px;
 }
 
 header div ul li{
     list-style: none;
-    margin: 0 10px;
 }
 
 header div ul li a {
     position: relative;
     font-family: "Bruno Ace SC", sans-serif;
+    margin: 10px;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.699);
     letter-spacing: 1px;
     transition: 0.7s;
-    font-weight: bold;
+    font-weight:bold;
 }
 
 a:hover {
-    color: rgba(230, 140, 22, 0.945);
+    color: rgb(255, 198, 13);
 }
 
 .logo {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: "Bruno Ace SC", sans-serif;
     letter-spacing: 2px;
     transition: 1.5s;
     padding: 15px 10px;
 }
 
-
 .titulo {
     text-align: center;
     color: rgba(197, 87, 68, 0.623);
-    margin-top: 30px;
-    padding: 20px;
-    font-size: 2.5em;
+    padding-top: 200px;
+    padding-inline: 10px;
+    margin: inline;
+    font-size: 75px;
     font-family: "Bruno Ace SC", sans-serif;
     letter-spacing: 10px;
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.7); 
+    text-shadow: 10px 10px 17px #ffffff70; 
 }
-
 
 main {
     background: linear-gradient(rgba(48, 36, 25, 0.753), rgba(39, 28, 19, 0.678)), url("/fondoM.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
-    padding: 20px;
-    box-sizing: border-box;
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 2px;
 }
 
 h2 {
-    text-align: center;
-    color: rgba(197, 87, 68, 0.623);
-    padding: 20px;
-    font-size: 2em;
     font-family: "Bruno Ace SC", sans-serif;
-    letter-spacing: 5px;
+    text-align: center;
+    font-size: 50px;
+    color: rgba(197, 87, 68, 0.623);
+    letter-spacing: 10px;
+    padding: 20px;
 }
 
 main p {
     color: rgba(214, 170, 88, 0.753);
     font-family: "Bruno Ace SC", sans-serif;
-    line-height: 1.6;
 }
 
-/* Estilos de la galería */
 .galeria {
+    margin-top: 100px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    width: auto;
+    height: 430px;
 }
 
 section img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 10px;
+    width: 0;
+    flex-grow: 1;
     opacity: .8;
     transition: .5s ease;
 }
 
 section img:hover {
-    cursor: pointer;
+    cursor: crosshair;
+    width: 300px;
     opacity: 1;
 }
 
-/* Estilos del video */
 .v {
+    margin-top: 100px;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 iframe {
-    width: 100%;
-    max-width: 500px;
-    height: 300px;
-    border: none;
-    padding: 10px;
+    padding: 10p;
+    width: 50%;
+    height: 400px;
 }
 
-/* Estilos del código */
 pre {
     color: rgba(214, 170, 88, 0.753);
     font-family: "Bruno Ace SC", sans-serif;
     font-size: 15px;
-    padding: 10px;
 }
 
 .i {
     margin-top: 15px;
+}
+
+/* Reglas de medios para dispositivos con ancho máximo de 600px (celulares) */
+@media only screen and (max-width: 600px) {
+    header {
+        height: auto;
+    }
+
+    header div {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .titulo {
+        padding-top: 100px;
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        padding: 10px 0;
+    }
+
+    .galeria {
+        margin-top: 50px;
+    }
+
+    section img {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+
+    iframe {
+        width: calc(100% - 20px);
+        margin: 10px 0;
+    }
+
+    pre {
+        font-size: 12px;
+    }
+
+    .i {
+        margin-top: 10px;
+    }
 }
