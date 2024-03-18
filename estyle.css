@@ -13,7 +13,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 110vh;
+    height: 80vh;
     background-image: url("fondo2.jpg");
     background-size: cover;
     background-position: center;
